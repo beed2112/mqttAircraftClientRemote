@@ -8,7 +8,7 @@ WORKDIR /app
 RUN apk add --no-cache build-base libffi-dev openssl-dev
 
 # Copy the Python script into the container
-COPY mqtt_client.py /app/mqtt_client.py
+COPY mqttAircraftClientRemote.py /app/mqttAircraftClientRemote.py
 
 # Install required Python packages
 RUN pip install --no-cache-dir paho-mqtt colorama
@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir paho-mqtt colorama
 EXPOSE 1883  # Customize based on your MQTT setup
 
 # Set the default command to run the Python script
-CMD ["python", "/app/mqtt_client.py"]
+CMD ["python", "/app/mqttAircraftClientRemote.py"]
