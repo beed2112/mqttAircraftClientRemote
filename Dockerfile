@@ -13,8 +13,6 @@ COPY mqttAircraftClientRemote.py /app/mqttAircraftClientRemote.py
 # Install required Python packages
 RUN pip install --no-cache-dir paho-mqtt colorama
 
-# Expose any necessary ports (optional, depending on your MQTT server setup)
-EXPOSE 1883  # Customize based on your MQTT setup
 
 # Set the default command to run the Python script
 CMD ["python", "/app/mqttAircraftClientRemote.py"]
