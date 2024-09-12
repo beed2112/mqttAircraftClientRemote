@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir paho-mqtt colorama
 
 
 # Set the default command to run the Python script
-CMD ["python", "/app/mqttAircraftClientRemote.py"]
+ENTRYPOINT ["python", "/app/mqttAircraftClientRemote.py"]
